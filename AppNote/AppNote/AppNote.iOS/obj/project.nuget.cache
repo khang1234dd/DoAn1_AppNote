@@ -1,0 +1,11 @@
+{
+  "version": 2,
+  "dgSpecHash": "o7VTA4hItdV0zcLd4G4/EMyoPbSrznm9l1crqeGot2p3JoB2r3FztVTvLgXzRFIjBt/uPUF/Tp8sbrDJC6EZfg==",
+  "success": true,
+  "projectFilePath": "D:\\nam3\\doan1_appnote\\AppNote\\AppNote\\AppNote.iOS\\AppNote.iOS.csproj",
+  "expectedPackageFiles": [
+    "C:\\Microsoft\\Xamarin\\NuGet\\xamarin.essentials\\1.5.3.2\\xamarin.essentials.1.5.3.2.nupkg.sha512",
+    "C:\\Microsoft\\Xamarin\\NuGet\\xamarin.forms\\5.0.0.1558-pre3\\xamarin.forms.5.0.0.1558-pre3.nupkg.sha512"
+  ],
+  "logs": []
+}

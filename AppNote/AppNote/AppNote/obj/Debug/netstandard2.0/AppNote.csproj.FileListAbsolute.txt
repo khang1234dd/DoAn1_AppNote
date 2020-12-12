@@ -1,0 +1,11 @@
+D:\nam3\doan1_appnote\AppNote\AppNote\AppNote\bin\Debug\netstandard2.0\AppNote.deps.json
+D:\nam3\doan1_appnote\AppNote\AppNote\AppNote\bin\Debug\netstandard2.0\AppNote.dll
+D:\nam3\doan1_appnote\AppNote\AppNote\AppNote\bin\Debug\netstandard2.0\ref\AppNote.dll
+D:\nam3\doan1_appnote\AppNote\AppNote\AppNote\bin\Debug\netstandard2.0\AppNote.pdb
+D:\nam3\doan1_appnote\AppNote\AppNote\AppNote\obj\Debug\netstandard2.0\AppNote.csprojAssemblyReference.cache
+D:\nam3\doan1_appnote\AppNote\AppNote\AppNote\obj\Debug\netstandard2.0\AppNote.AssemblyInfoInputs.cache
+D:\nam3\doan1_appnote\AppNote\AppNote\AppNote\obj\Debug\netstandard2.0\AppNote.AssemblyInfo.cs
+D:\nam3\doan1_appnote\AppNote\AppNote\AppNote\obj\Debug\netstandard2.0\AppNote.csproj.CoreCompileInputs.cache
+D:\nam3\doan1_appnote\AppNote\AppNote\AppNote\obj\Debug\netstandard2.0\AppNote.dll
+D:\nam3\doan1_appnote\AppNote\AppNote\AppNote\obj\Debug\netstandard2.0\ref\AppNote.dll
+D:\nam3\doan1_appnote\AppNote\AppNote\AppNote\obj\Debug\netstandard2.0\AppNote.pdb

@@ -1,0 +1,14 @@
+{
+  "version": 2,
+  "dgSpecHash": "fwKy/aDzA0CBf2o8SAPKXSaxo4zLKRuNxan7SiblbQz24d75OKV1Oz2/WmpDHzhVsfJPoOedaQBnSC5TDdg9Gw==",
+  "success": true,
+  "projectFilePath": "D:\\nam3\\doan1_appnote\\AppNote\\AppNote\\AppNote\\AppNote.csproj",
+  "expectedPackageFiles": [
+    "C:\\Users\\Khang Dang\\.nuget\\packages\\microsoft.netcore.platforms\\1.1.0\\microsoft.netcore.platforms.1.1.0.nupkg.sha512",
+    "C:\\Users\\Khang Dang\\.nuget\\packages\\netstandard.library\\2.0.3\\netstandard.library.2.0.3.nupkg.sha512",
+    "C:\\Users\\Khang Dang\\.nuget\\packages\\system.numerics.vectors\\4.5.0\\system.numerics.vectors.4.5.0.nupkg.sha512",
+    "C:\\Microsoft\\Xamarin\\NuGet\\xamarin.essentials\\1.5.3.2\\xamarin.essentials.1.5.3.2.nupkg.sha512",
+    "C:\\Microsoft\\Xamarin\\NuGet\\xamarin.forms\\5.0.0.1558-pre3\\xamarin.forms.5.0.0.1558-pre3.nupkg.sha512"
+  ],
+  "logs": []
+}

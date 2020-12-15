@@ -12,18 +12,15 @@ namespace AppNote
     {
         Editor noteEditer;
         Label textLabel;
-        Button saveButton, deleteButton,saveFile,docFile;
+        Button saveButton, deleteButton,saveFile,docFile,nextPage;
         ScrollView scroll;
         Note note = new Note();
-        List<Note> notecollection { set; get; }
-        
+
         public MainPage()
         {
             
-            BindingContext = saveButton;
-
-            notecollection = new List<Note>();
             BackgroundColor = Color.PowderBlue;
+            NavigationPage.SetHasNavigationBar(this, false);
 
             //Tạo đối tượng cho Image
             Image noteImage = new Image
@@ -81,13 +78,26 @@ namespace AppNote
             textLabel = new Label
             {
                 FontSize = 30,
-                BackgroundColor = Color.LightGray,
-                Margin = new Thickness(10)
+                BackgroundColor = Color.FromHex("FDFFAA"),
+                TextColor = Color.Black,
+                Text = note.text,
+                Margin = new Thickness(5)
             };
+            //textLabel_clic
+            //var secondpage = new SecondPage();
+            //secondpage.BindingContext = textLabel.Text;
             scroll = new ScrollView();
             scroll.Content = textLabel;
 
-          //Quy gird gồm 2 cột và 4 hàng
+            nextPage = new Button
+            {
+                Text = "View",
+                TextColor = Color.White,
+                BackgroundColor = Color.LightPink,
+                Margin = new Thickness(5)
+            };
+            nextPage.Clicked += NextPage_Clicked;
+            //Quy gird gồm 2 cột và 4 hàng
             Grid grid = new Grid
             {
                 Margin = new Thickness(20, 40),
@@ -98,11 +108,12 @@ namespace AppNote
                 },
                 RowDefinitions =
                 {
-                    new RowDefinition { Height = new GridLength(1.0, GridUnitType.Star) },
-                    new RowDefinition { Height = new GridLength(2.5, GridUnitType.Star) },
+                    new RowDefinition { Height = new GridLength(0.8, GridUnitType.Star) },
+                    new RowDefinition { Height = new GridLength(2.0, GridUnitType.Star) },
                     new RowDefinition { Height = new GridLength(1.0, GridUnitType.Star) },
                     new RowDefinition { Height = new GridLength(1.0, GridUnitType.Star) },
                     new RowDefinition { Height = new GridLength(2.0, GridUnitType.Star) },
+                    new RowDefinition { Height = new GridLength(1.0, GridUnitType.Star) },
                 }
             };
 
@@ -125,26 +136,41 @@ namespace AppNote
             // gọi đối tượng text Label hiển thị ở vị trí hàng 3 cột 0
             grid.Children.Add(scroll, 0, 4);
             Grid.SetColumnSpan(scroll, 2);
-           // scroll.Content = textLabel;
+            // button next page
+            grid.Children.Add(nextPage, 0, 5);
+            Grid.SetColumnSpan(nextPage, 2);
+            // scroll.Content = textLabel;
             Content = grid;
 
             
         }
 
+        async void NextPage_Clicked(object sender, EventArgs e)
+        {
+            textLabel = new Label()
+            {
+                Text = note.text,
+            };
+            SecondPage secondPage = new SecondPage();
+            secondPage.BindingContext = textLabel;
+            await Navigation.PushAsync(secondPage);
+            
+        }
+
         private void DocFile_Clicked(object sender, EventArgs e)
         {
-                string documentsPath = Environment.GetFolderPath(Environment.SpecialFolder.LocalApplicationData);
-                string fileName = Path.Combine(documentsPath, "temp.txt");
-                bool doesExist = File.Exists(fileName);
-                if (doesExist == true)
-                {
-                    string text = File.ReadAllText(fileName);
-                    textLabel.Text = text;
-                }
-                else
-                {
-                    textLabel.Text = "False";
-                }    
+            string documentsPath = Environment.GetFolderPath(Environment.SpecialFolder.LocalApplicationData);
+            string fileName = Path.Combine(documentsPath, "temp.txt");
+            bool doesExist = File.Exists(fileName);
+            if (doesExist == true)
+            {
+                string text = File.ReadAllText(fileName);
+                textLabel.Text = text;
+            }
+            else
+            {
+                textLabel.Text = "False";
+            }    
         }
 
         private void SaveFile_Clicked(object sender, EventArgs e)
@@ -169,8 +195,6 @@ namespace AppNote
             noteEditer.Text = "";
             Note note = new Note();
             note.text = noteEditer.Text;
-
-            notecollection.Clear();
         }
 
         private void SaveButton_Clicked(object sender, EventArgs e)
@@ -178,5 +202,6 @@ namespace AppNote
             note.text = noteEditer.Text;
             textLabel.Text = note.text;
         }
+
     }
 }

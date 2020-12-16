@@ -147,14 +147,9 @@ namespace AppNote
 
         async void NextPage_Clicked(object sender, EventArgs e)
         {
-            textLabel = new Label()
-            {
-                Text = note.text,
-            };
             SecondPage secondPage = new SecondPage();
             secondPage.BindingContext = textLabel;
             await Navigation.PushAsync(secondPage);
-            
         }
 
         private void DocFile_Clicked(object sender, EventArgs e)
